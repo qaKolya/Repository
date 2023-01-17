@@ -28,30 +28,30 @@ def req():
 # class TestMe:
 class Testing:
 
-    # def get_Token(self):
-    #     response = requests.post(url=baseUrl + "access_token", data=formData, params=params)
-    #     req_json = json.loads(response.text)
-    #     # print("\n",json.dumps(req_json, indent=4))
-    #     # print("\n",req_json)
-    #     return req_json["access_token"]
+    def get_Token(self):
+        response = requests.post(url=baseUrl + "access_token", data=formData, params=params)
+        req_json = json.loads(response.text)
+        # print("\n",json.dumps(req_json, indent=4))
+        # print("\n",req_json)
+        return req_json["access_token"]
 
-    # url = "http://127.0.0.1:5000/"
-    #
-    #  def test_own_service(self):
-    #      req = requests.get(url=self.url)
-    #      req_json = json.loads(req.text)
-    #      print(req_json)
-    #      if req_json["message"] == "ok":
-    #          pass
-    #      else:
-    #          raise ValueError("Ожидали 'ok', получили {}".format(req_json))
-    #
-    #  def test_own_service_post(self):
-    #      req = requests.get(url=self.url)
-    #      req_json = json.loads(req.text)
-    #      assert req_json["message"] == "ok"
-    #      assert req.status_code == 200
-    #      print(req_json)
+    url = "http://127.0.0.1:5000/"
+
+     def test_own_service(self):
+         req = requests.get(url=self.url)
+         req_json = json.loads(req.text)
+         print(req_json)
+         if req_json["message"] == "ok":
+             pass
+         else:
+             raise ValueError("Ожидали 'ok', получили {}".format(req_json))
+
+     def test_own_service_post(self):
+         req = requests.get(url=self.url)
+         req_json = json.loads(req.text)
+         assert req_json["message"] == "ok"
+         assert req.status_code == 200
+         print(req_json)
 
     def test_receive_single_user(self):
         payload = {
